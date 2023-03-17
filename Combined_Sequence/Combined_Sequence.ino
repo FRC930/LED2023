@@ -4,20 +4,19 @@
 #define NUM_LEDS_PER_STRIP 36
 CRGB leds[NUM_STRIPS][NUM_LEDS_PER_STRIP];
 CRGB redStrip[NUM_LEDS_PER_STRIP];
-
+ftrfdt
 // Define active state of pins vs inactive pins
 // Sometimes inputs can be flipped, so this saves time changing the values of input and output in the loop
 #define PIN_ACTIVE 1
 #define PIN_INACTIVE 0
 
   // Intialize random numbers for random LED pattern
-  long randNumber1;
+long randNumber1;
 long randNumber2;
 long randNumber3;
 
   // Setup the different strips of LEDs
-  void
-  setup() {
+  void setup() {
   // Set the brightness of the LED Strips in order to avoid overloading the board
   FastLED.setBrightness(100);  //50);
   // tell FastLED library what pin the LED strips are on
