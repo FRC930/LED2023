@@ -42,7 +42,7 @@ void REDALLIANCE() {
   }
 }
 void CONEREQUEST() {
-  // FastLED.setBrightness(100);
+  FastLED.setBrightness(100);
   for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
     leds[0][i] = CRGB(230, 100, 1);
     FastLED.show();
@@ -52,7 +52,7 @@ void CONEREQUEST() {
 }
 void CONEREQUEST2() {
   static int position = 0;
-  // FastLED.setBrightness(100);
+  FastLED.setBrightness(100);
   for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
     leds[0][i] = CRGB(230, 100, 1);
   }
@@ -67,7 +67,7 @@ void CONEREQUEST2() {
 void CONEREQUEST3() {
   static int position = 0;
   static bool reachedTop = false;
-  // FastLED.setBrightness(100);
+  FastLED.setBrightness(100);
   for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
     leds[0][i] = CRGB(230, 100, 1);
   }
@@ -88,7 +88,7 @@ void CONEREQUEST3() {
   FastLED.show();
 }
 void CONEREQUEST4() {
-  // FastLED.setBrightness(100);
+  FastLED.setBrightness(100);
   for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
     leds[0][i] = CRGB(230, 100, 1);
   }
@@ -102,7 +102,7 @@ void CONEREQUEST4() {
 void CONEAQUIRED()
 // Set all the LEDs in the Array to Yellow
 {
-  // FastLED.setBrightness(100);
+  FastLED.setBrightness(100);
   for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
     leds[0][i] = CRGB(230, 100, 1);
     FastLED.show();
@@ -111,7 +111,7 @@ void CONEAQUIRED()
 void CUBEREQUEST()
 // Set all the LEDs in the Array to Purple, wait half a second, and then clear all the LEDs and Repeat
 {
-  // FastLED.setBrightness(100);
+  FastLED.setBrightness(100);
   for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
     leds[0][i] = CRGB(20, 0, 25);
     FastLED.show();
@@ -121,7 +121,7 @@ void CUBEREQUEST()
 }
 void CUBEREQUEST2() {
   static int position = 0;
-  // FastLED.setBrightness(100);
+  FastLED.setBrightness(100);
   for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
     leds[0][i] = CRGB(20, 0, 25);
   }
@@ -136,7 +136,7 @@ void CUBEREQUEST2() {
 void CUBEREQUEST3() {
   static int position = 0;
   static bool reachedTop = false;
-  // FastLED.setBrightness(100);
+  FastLED.setBrightness(100);
   for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
     leds[0][i] = CRGB(20, 0, 25);
   }
@@ -157,7 +157,7 @@ void CUBEREQUEST3() {
   FastLED.show();
 }
 void CUBEREQUEST4() {
-  // FastLED.setBrightness(100);
+  FastLED.setBrightness(100);
   for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
     leds[0][i] = CRGB(20, 0, 25);
   }
@@ -165,13 +165,13 @@ void CUBEREQUEST4() {
     leds[0][i].fadeToBlackBy(64);
   }
   for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
-    leds[0][i].fadeLightBy(256);
+    leds[0][i].fadeLightBy(255);
   }
 }
 void CUBEAQUIRED()
 // Set all the LEDs in the Array to Purple
 {
-  // FastLED.setBrightness(100);
+  FastLED.setBrightness(100);
   for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
     leds[0][i] = CRGB(20, 0, 25);
     FastLED.show();
@@ -181,7 +181,7 @@ void DISABLED()
 // Set all the LEDs in the Array to Orange (Disalbed)
 // TODO: Check if the Color is the same as the disabled color on the robot, or at least close to it
 {
-  // FastLED.setBrightness(100);
+  FastLED.setBrightness(100);
   for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
     leds[0][i] = CRGB(255, 0, 0);
     FastLED.show();
@@ -190,7 +190,7 @@ void DISABLED()
 void BLUEALLIANCE()
 // Set all the LEDs in the array to Blue
 {
-  // FastLED.setBrightness(100);
+  FastLED.setBrightness(100);
   for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
     leds[0][i] = CRGB(0, 0, 255);
     FastLED.show();
@@ -224,7 +224,7 @@ void BLUEALLIANCE()
 //   FastLED.delay(250);
 // }
 void RANDOMLIGHTS() {
-  // FastLED.setBrightness(100);
+  FastLED.setBrightness(100);
   
     // Pick a random number from 0 to 255 and set each of the rgb values to one of the random valuesd
     for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
@@ -236,7 +236,7 @@ void RANDOMLIGHTS() {
   }
 }
 void AUTOBALANCEENGAGED() {
-  // FastLED.setBrightness(100);
+  FastLED.setBrightness(100);
   for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
     leds[0][i] = CRGB(255, 255, 255);
     FastLED.show();
@@ -245,7 +245,7 @@ void AUTOBALANCEENGAGED() {
 void AUTOBALANCENOTENGAGED() {
   static int position = 0;
   static bool reachedTop = false;
-  // FastLED.setBrightness(100);
+  FastLED.setBrightness(100);
   for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
     leds[0][i] = CRGB(255, 255, 255);
   }
