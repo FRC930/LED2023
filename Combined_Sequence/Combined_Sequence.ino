@@ -99,29 +99,43 @@ void CONEREQUEST3() {
 }
 void CONEREQUEST4() {
   //FastLED.setBrightness(80);
-  static int counter = 0;
-  static bool firstTime = true;
+  static int brightness = 0;
+  static bool maxBrightnessReached = false;
+  static bool minBrightnessReached = false;
   
-  //if(firstTime){
-    for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
-      leds[0][i] = CRGB(230, 100, 1);
-    }
-    //firstTime = false;
-  //}
+  for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
+    leds[0][i] = CRGB(230, 100, 1);
+  }
 
   FastLED.show();
 
-  for(int i = 80; i > 0; i--){
-    FastLED.setBrightness(i);
-    FastLED.show();
-    delay(10);
+  if(!maxBrightnessReached){
+    brightness++;
+  }
+  else{
+    brightness--;
+  }
+  if(brightness <=0){
+    maxBrightnessReached = false;
+  }
+  if(brightness >= 80){
+    maxBrightnessReached = true;
   }
 
-  for(int i = 0; i < 80; i++){
-    FastLED.setBrightness(i);
-    FastLED.show();
-    delay(10);
-  }
+  delay(5);
+  FastLED.setBrightness(brightness);
+
+  // for(int i = 80; i > 0; i--){
+  //   FastLED.setBrightness(i);
+  //   FastLED.show();
+  //   delay(10);
+  // }
+
+  // for(int i = 0; i < 80; i++){
+  //   FastLED.setBrightness(i);
+  //   FastLED.show();
+  //   delay(10);
+  // }
 
   // for(int i = 0; i < 255; i++){
   //   delay(100);
@@ -221,17 +235,33 @@ void CUBEREQUEST3() {
   FastLED.show();
 }
 void CUBEREQUEST4() {
-  FastLED.setBrightness(100);
-
+  //FastLED.setBrightness(80);
+  static int brightness = 0;
+  static bool maxBrightnessReached = false;
+  static bool minBrightnessReached = false;
+  
   for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
     leds[0][i] = CRGB(20, 0, 25);
   }
-  for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
-    leds[0][i].fadeToBlackBy(64);
+
+  FastLED.show();
+
+  if(!maxBrightnessReached){
+    brightness++;
   }
-  for (int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
-    leds[0][i].fadeLightBy(256);
+  else{
+    brightness--;
   }
+  if(brightness <=0){
+    maxBrightnessReached = false;
+  }
+  if(brightness >= 80){
+    maxBrightnessReached = true;
+  }
+
+  delay(5);
+  FastLED.setBrightness(brightness);
+
 }
 void CUBEAQUIRED()
 // Set all the LEDs in the Array to Purple
